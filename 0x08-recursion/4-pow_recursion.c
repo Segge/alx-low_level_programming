@@ -5,7 +5,7 @@
  *@x: number to be raised
  *@y: the power
  *
- *Return:value of x raised to power of y.
+ *Return: value of x raised to power of y.
  *
  */
 
@@ -21,7 +21,7 @@ int _pow_recursion(int x, int y)
 
 		return (1);
 
-	result *= _pow_recursion(x, y - 1);
+	ans *= _pow_recursion(x, y - 1);
 
 	return (ans);
 }
