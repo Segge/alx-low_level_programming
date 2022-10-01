@@ -1,9 +1,9 @@
 #include <stdio.h>
 
 /**
- *main - writes a program that prints its name.
- *@argc: arguments count
- *@argv: argument vector 
+ *main - writes the program that prints its name.
+ *@argc:argument count
+ *@argv: argument vector
  *
  *Return: always 0
  */
