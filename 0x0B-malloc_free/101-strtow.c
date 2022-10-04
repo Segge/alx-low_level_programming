@@ -15,7 +15,7 @@ int count_words(char *str)
 
 	while (*(str + i))
 	{
-		if ((*(str + i) == ' ' || *(str + i + 1) == 0) && check)
+		if ((*(str + i) == ' ' || *(str + i + 1) == 0) && checkW)
 		{
 			checkW = 0;
 			words++;
@@ -59,16 +59,16 @@ void look_pos(char *str, int *pos)
 				*(pos + j) = i;
 				j++;
 																								}
-				if (*(str + i + 1) == 0 && (checkN == 0))
+			if (*(str + i + 1) == 0 && (checkN == 0))
+				*(pos + j) = i;
+				if (*(str + i + 1) == ' ' && *(str + i) != ' ')
+				{
 					*(pos + j) = i;
-					if (*(str + i + 1) == ' ' && *(str + i) != ' ')
-					{
-						*(pos + j) = i;
-						j++;
-					}
-					if (*(str + i) == ' ')
-						checkN = 1;
-						i++;
+					j++;
+				}
+				if (*(str + i) == ' ')
+					checkN = 1;
+					i++;
 	}
 }
 /**
