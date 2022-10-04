@@ -28,25 +28,19 @@ char *argstostr(int ac, char **av)
 
 		t_count++;
 		}
-	else
-	{
-	result = malloc(sizeof(char) * t_count + 1);
-	}
-		if (result == NULL)
-		{
-			return ('\0');
-		}
-			for (i = 0; i < ac; i++)
+		result = malloc(sizeof(char) * t_count + 1);
+			if (result == NULL)
 			{
-				for (j = 0; av[i][j] != '\0'; j++)
-				{
-				result[count++] = av[i][j];
-				}
-			result[count++] = '\n';
+			return ('\0');
 			}
-		else
-		{
-		result[t_count] = '\0';
-		}
-return (result);
+				for (i = 0; i < ac; i++)
+				{
+					for (j = 0; av[i][j] != '\0'; j++)
+					{
+					result[count++] = av[i][j];
+					}
+					result[count++] = '\n';
+				}
+				result[t_count] = '\0';
+	return (result);
 }
