@@ -18,8 +18,9 @@ char *argstostr(int ac, char **av)
 	char *result;
 
 	if (ac == 0 || av == NULL)
-		return ('\0');
-
+	{
+	return ('\0');
+	}
 		for (i = 0; i < ac; i++)
 		{
 			for (j = 0; av[i][j] != '\0'; j++)
@@ -27,22 +28,25 @@ char *argstostr(int ac, char **av)
 
 		t_count++;
 		}
-
-			result = malloc(sizeof(char) * t_count + 1);
-
-				if (result == NULL)
+	else
+	{
+	result = malloc(sizeof(char) * t_count + 1);
+	}
+		if (result == NULL)
+		{
+			return ('\0');
+		}
+			for (i = 0; i < ac; i++)
+			{
+				for (j = 0; av[i][j] != '\0'; j++)
 				{
-					return ('\0');
+				result[count++] = av[i][j];
 				}
-
-					for (i = 0; i < ac; i++)
-					{
-					for (j = 0; av[i][j] != '\0'; j++)
-					{
-						result[count++] = av[i][j];																	}
-					result[count++] = '\n';
-					}
-
-				result[t_count] = '\0';
-	return (result);
+			result[count++] = '\n';
+			}
+		else
+		{
+		result[t_count] = '\0';
+		}
+return (result);
 }
