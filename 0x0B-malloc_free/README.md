@@ -1,5 +1,7 @@
-0x0B. C - malloc, free
+0x0B. C - malloc, free.
+
 Tasks and Descriptions
+
 0) Write a function that creates an array of chars, and initializes it with a specific char.
 
 Prototype: char *create_array(unsigned int size, char c);
