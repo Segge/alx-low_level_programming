@@ -4,20 +4,23 @@
 #include <stdio.h>
 
 /**
- *struct dog - Struct dog
- *@name: name of dog
- *@age: age of dog
- *@owner: owner of dog
- *Description: The struct belongs to dog.
- *
+ *struct dog - New user data type describing a dog
+ *@name: name of the dog
+ *@age: age of the dog
+ *@owner: owner of the dog
+ *Description: struct belong to dog
  */
 struct dog
 {
-	char *namne;
+	char *name;
 	float age;
 	char *owner;
 };
 
+/**
+ *dog_t -A typedef for struct dog
+ *
+ */
 typedef struct dog dog_t;
 void init_dog(struct dog *d, char *name, float age, char *owner);
 void print_dog(struct dog *d);
